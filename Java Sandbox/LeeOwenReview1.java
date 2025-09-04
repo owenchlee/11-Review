@@ -87,9 +87,152 @@ public class LeeOwenReview1
         System.out.println("Enter second number");
         num2 = scan.nextDouble();
         
-        if (num1 > 
+        if (num1 > num2){
+            System.out.println(num1 + " is the larger number.");
+        } else if (num2 > num1){
+            System.out.println(num2 + " is the larger number.");
+        } else {
+            System.out.println("They are the same");
+        }
+    }
+    
+    public static void q7_threeSum(){
+        int userAns;
+        int correct = 0;
+        int counter = 0;
+        while (counter < 3){
+            int random1 = (int)(Math.random() * 101); 
+            int random2 = (int)(Math.random() * 101); 
+            System.out.println("What is " + random1 + " + " + random2 + "?");
+            userAns = scan.nextInt();
+            if (userAns == random1 + random2){
+                correct++;
+                System.out.println("Correct!");
+            } else{
+                System.out.println(random1+random2);
+            }
+            counter++;
+        }
+        System.out.println("You got " + correct + " correct answers.");
+    }
+    
+    public static void q8_smallestValue(){
+        double num1, num2, num3;
+        double smallest;
+        
+        System.out.println("Enter first number");
+        num1 = scan.nextDouble();
+        
+        System.out.println("Enter second number");
+        num2 = scan.nextDouble();
+        
+        System.out.println("Enter third number");
+        num3 = scan.nextDouble();
+        
+        if (num1 < num2){
+            smallest = num1;
+        } else{
+            smallest = num2;
+        }
+        
+        if (smallest < num3){
+            System.out.println(smallest + " is the smallest.");
+        } else{
+            System.out.println(num3 + " is the smallest.");
+        }
+    }
+    
+    public static void q9_ageClassication(){
+        int age;
+        
+        System.out.println("What is your age?");
+        age = scan.nextInt();
+        
+        if (age < 13){
+            System.out.println("You are a child.");
+        } else if (age < 20){
+            System.out.println("You are a teenager.");
+        } else if (age < 66){
+            System.out.println("You are an adult.");
+        } else {
+            System.out.println("You are a senior citizen.");
+        }
+    }
+    
+    public static void q10_barGraph(){
+        int val1, val2, val3, val4, val5;
+        
+        System.out.println("Enter first number between 1 and 50");
+        val1 = scan.nextInt();
+        
+        System.out.println("Enter second number between 1 and 50");
+        val2 = scan.nextInt();
+        
+        System.out.println("Enter third number between 1 and 50");
+        val3 = scan.nextInt();
+        
+        System.out.println("Enter fourth number between 1 and 50");
+        val4 = scan.nextInt();
+        
+        System.out.println("Enter fifth number between 1 and 50");
+        val5 = scan.nextInt();
+        
+        int[] valArr = {val1, val2, val3, val4, val5};
+        
+        for (int i = 0; i < 5; i++){
+            for (int j = 0; j < valArr[i]; j++){
+                System.out.print("O");
+            }
+            System.out.println();
+        }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
