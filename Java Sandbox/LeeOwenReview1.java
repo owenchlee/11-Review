@@ -109,7 +109,7 @@ public class LeeOwenReview1
                 correct++;
                 System.out.println("Correct!");
             } else{
-                System.out.println(random1+random2);
+                System.out.println("Incorrect, the correct answer is " + (random1+random2));
             }
             counter++;
         }
